@@ -3,6 +3,11 @@ import pandas as pd
 from datetime import datetime
 
 # -----------------------
+# PAGE CONFIG
+# -----------------------
+st.set_page_config(page_title="Pre-cooling Decision Support", page_icon="🏨", layout="centered")
+
+# -----------------------
 # LOAD DATA
 # -----------------------
 df = pd.read_csv("precooling_historical_dataset_300rows_v2.csv")
@@ -11,6 +16,7 @@ df = pd.read_csv("precooling_historical_dataset_300rows_v2.csv")
 # TITLE
 # -----------------------
 st.title("🏨 Pre-cooling Decision Support")
+st.caption("Rules-based prototype for estimating guest return timing and pre-cooling action.")
 
 # -----------------------
 # INPUTS
@@ -18,19 +24,19 @@ st.title("🏨 Pre-cooling Decision Support")
 st.subheader("Guest Context")
 
 customer_type = st.selectbox("Customer Type", ["Solo traveler", "Family"])
-age = st.number_input("Age", 30, 40, 35)
+age = st.number_input("Age", min_value=30, max_value=40, value=35)
 gender = st.selectbox("Gender", ["Male", "Female"])
 day_type = st.selectbox("Day Type", ["Weekday", "Weekend"])
 
 st.subheader("Environment")
-current_temp = st.number_input("Current Temperature (°C)", 18.0, 40.0, 30.0)
+current_temp = st.number_input("Current Temperature (°C)", min_value=18.0, max_value=40.0, value=30.0, step=0.5)
 
 st.subheader("Room Status")
-vacant_since_str = st.time_input("Guest Left At")
+guest_left_at = st.time_input("Guest Left At")
 
 # auto current time
 current_time = datetime.now()
-st.write("**Current Time:**", current_time.strftime("%I:%M %p"))
+st.write("**Current Time:**", current_time.strftime("%I:%M %p").lstrip("0"))
 
 run = st.button("Run Prediction")
 
@@ -38,14 +44,15 @@ run = st.button("Run Prediction")
 # HELPER FUNCTIONS
 # -----------------------
 def map_temp_band(temp: float) -> str:
+    # aligned to dataset
     if temp >= 35:
         return "High"
     elif temp >= 32:
         return "Medium"
     return "Low"
 
-def get_leave_time_band(dt):
-    hour = dt.hour
+def get_leave_time_band(dt_obj: datetime) -> str:
+    hour = dt_obj.hour
     if 6 <= hour < 12:
         return "Morning"
     elif 12 <= hour < 17:
@@ -61,7 +68,7 @@ def get_tier_label(tier: str) -> str:
         return "Partial match (moderate confidence)"
     return "Broad pattern (lower confidence)"
 
-def calculate_decision(elapsed: int, remaining: int) -> str:
+def calculate_decision(remaining: int) -> str:
     if remaining < 0:
         return "Manual review"
     elif remaining <= 10:
@@ -70,11 +77,11 @@ def calculate_decision(elapsed: int, remaining: int) -> str:
         return "Prepare for pre-cooling"
     return "Wait"
 
-def format_time(dt_obj):
+def format_time(dt_obj: datetime) -> str:
     return dt_obj.strftime("%I:%M %p").lstrip("0")
 
-def get_behavior_explanation(match_df, elapsed, median):
-    if "scenario" not in match_df.columns:
+def get_behavior_explanation(match_df: pd.DataFrame, elapsed: int, median: int) -> str:
+    if "scenario" not in match_df.columns or len(match_df) == 0:
         return "Top behavior patterns: not available"
 
     pattern = (
@@ -87,39 +94,35 @@ def get_behavior_explanation(match_df, elapsed, median):
     if len(pattern) == 0:
         return "Top behavior patterns: not available"
 
-    # If overdue → avoid misleading "quick nap"
+    # If overdue, avoid misleading short-return story
     if elapsed > median:
         return (
-            "Historical data suggests shorter return patterns, "
-            "but the current room has already been vacant longer than expected."
+            "Historical data suggests shorter return patterns, but the current room has already "
+            "been vacant longer than the typical return duration."
         )
 
     short_patterns = {"quick_nap", "quick_return"}
 
+    # If already vacant a long time, suppress very short-return patterns from the explanation
     if elapsed > 180:
         pattern = pattern[~pattern.index.isin(short_patterns)]
 
     if len(pattern) == 0:
         return "Top behavior patterns: mixed behavior observed"
 
-    formatted = [
-        f"{int(v*100)}% {k.replace('_',' ').title()}"
-        for k, v in pattern.items()
-    ]
-
+    formatted = [f"{int(v * 100)}% {k.replace('_', ' ').title()}" for k, v in pattern.items()]
     return "Top behavior patterns: " + " · ".join(formatted)
 
 # -----------------------
 # MAIN LOGIC
 # -----------------------
 if run:
-
-    vac = datetime.combine(datetime.today(), vacant_since_str)
+    vac = datetime.combine(datetime.today(), guest_left_at)
     now = current_time
 
-    # handle overnight
+    # Handle overnight case
     if now < vac:
-        st.warning("Assuming current time is next day.")
+        st.warning("Assuming Current Time is on the next day.")
         now = now + pd.Timedelta(days=1)
 
     leave_time_band = get_leave_time_band(vac)
@@ -128,6 +131,7 @@ if run:
     # -----------------------
     # MATCHING
     # -----------------------
+    # Tier 1: most specific operational match
     match = df[
         (df["customer_type"] == customer_type) &
         (df["day_type"] == day_type) &
@@ -137,6 +141,7 @@ if run:
     ]
     tier = "Tier 1"
 
+    # Tier 2: relax temperature
     if len(match) < 5:
         match = df[
             (df["customer_type"] == customer_type) &
@@ -145,6 +150,7 @@ if run:
         ]
         tier = "Tier 2"
 
+    # Tier 3: broad pattern
     if len(match) < 5:
         match = df[
             (df["customer_type"] == customer_type) &
@@ -153,7 +159,7 @@ if run:
         tier = "Tier 3"
 
     if len(match) == 0:
-        st.error("No matching data found.")
+        st.error("No matching historical data found.")
     else:
         # -----------------------
         # CALCULATION
@@ -166,8 +172,7 @@ if run:
         remaining = median - elapsed
 
         expected_return_dt = vac + pd.Timedelta(minutes=median)
-
-        decision = calculate_decision(elapsed, remaining)
+        decision = calculate_decision(remaining)
 
         spread = p75 - p25
         if tier == "Tier 1" and len(match) >= 15 and spread <= 180:
@@ -177,46 +182,58 @@ if run:
         else:
             confidence = "Low"
 
+        tier_label = get_tier_label(tier)
+        behavior_explanation = get_behavior_explanation(match, elapsed, median)
+
         # -----------------------
         # OUTPUT
         # -----------------------
         st.subheader("📊 Output")
-
         st.write(f"**Expected Return Time:** {format_time(expected_return_dt)}")
         st.write(f"**Confidence Level:** {confidence}")
         st.write(f"**Recommended Action:** {decision}")
 
+        if remaining < 0:
+            st.info(
+                "Verify if the guest has returned (e.g., door sensor, keycard activity, or front desk). "
+                "Do not trigger pre-cooling automatically."
+            )
+
         # -----------------------
-        # WHY
+        # WHY THIS RESULT
         # -----------------------
         st.divider()
         st.subheader("🧠 Why this result")
 
         st.write(f"Based on **{len(match)} similar cases**")
-        st.write(f"Confidence basis: **{get_tier_label(tier)}**")
-
+        st.write(f"Confidence basis: **{tier_label}**")
         st.write(
             f"Matched scenario: **{customer_type} · {day_type} · {leave_time_band} · {current_temp:.1f}°C ({temp_band})**"
         )
-
         st.write(f"Median return duration: **{median} mins**")
         st.write(f"Expected return time: **{format_time(expected_return_dt)}**")
         st.write(f"Current time: **{format_time(now)}**")
 
         st.write("Typical return window:")
-        st.write(f"- 25% return before **{format_time(vac + pd.Timedelta(minutes=p25))}**")
-        st.write(f"- 75% return before **{format_time(vac + pd.Timedelta(minutes=p75))}**")
+        st.write(f"- 25% of guests return before **{format_time(vac + pd.Timedelta(minutes=p25))}**")
+        st.write(f"- 75% of guests return before **{format_time(vac + pd.Timedelta(minutes=p75))}**")
 
         if remaining < 0:
             st.write(
                 "Interpretation: The expected return time has already passed. "
-                "This case may not follow the typical pattern, so manual review is recommended."
+                "This case may not follow the typical historical pattern, so automatic pre-cooling is not recommended."
             )
         elif remaining <= 10:
-            st.write("Interpretation: Guest likely returning very soon → start pre-cooling now.")
+            st.write(
+                "Interpretation: The guest is likely to return very soon, so pre-cooling should start now."
+            )
         elif remaining <= 30:
-            st.write("Interpretation: Guest returning soon → prepare for pre-cooling.")
+            st.write(
+                "Interpretation: The guest is likely to return soon, so the room should be prepared for pre-cooling."
+            )
         else:
-            st.write("Interpretation: Return is still far → no action needed yet.")
+            st.write(
+                "Interpretation: The expected return window is still far enough away that immediate pre-cooling is not needed yet."
+            )
 
-        st.write(get_behavior_explanation(match, elapsed, median))
+        st.write(behavior_explanation)
