@@ -1,128 +1,147 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 from datetime import datetime
 
-# =========================
-# Load data
-# =========================
+# -----------------------
+# LOAD DATA
+# -----------------------
 df = pd.read_csv("precooling_historical_dataset_300rows_v2.csv")
 
-# =========================
-# Helper functions
-# =========================
-def get_temp_band(temp):
-    if temp >= 35:
-        return "High"
-    elif temp >= 32:
-        return "Medium"
-    return "Low"
+# -----------------------
+# TITLE
+# -----------------------
+st.title("🏨 Pre-cooling Decision Support")
 
+# -----------------------
+# INPUTS
+# -----------------------
+st.subheader("User Input")
+
+customer_type = st.selectbox("Customer Type", ["Solo traveler", "Family"])
+age = st.number_input("Age", 30, 40, 35)
+gender = st.selectbox("Gender", ["Male", "Female"])
+day_type = st.selectbox("Day Type", ["Weekday", "Weekend"])
+leave_time_band = st.selectbox("Leave Time", ["Morning", "Afternoon", "Evening", "Late night"])
+temp_band = st.selectbox("Temperature Band", ["Low", "Medium", "High"])
+
+st.subheader("Room Status")
+
+vacant_since_str = st.time_input("Vacant Since")
+current_time_str = st.time_input("Current Time")
+
+run = st.button("Run Prediction")
+
+# -----------------------
+# HELPER FUNCTIONS
+# -----------------------
 def calculate_decision(remaining):
     if remaining <= 10:
-        return "🔥 Pre-cool now"
+        return "Pre-cool now"
     elif remaining <= 30:
-        return "⚠️ Prepare"
+        return "Prepare for pre-cooling"
     else:
-        return "⏳ Wait"
+        return "Wait"
 
-# =========================
-# UI
-# =========================
-st.title("🏨 Pre-cooling Prototype")
+def get_tier_label(tier):
+    if tier == "Tier 1":
+        return "Exact match (high confidence)"
+    elif tier == "Tier 2":
+        return "Partial match (moderate confidence)"
+    else:
+        return "Broad pattern (lower confidence)"
 
-# -------- Guest Context --------
-st.subheader("Guest Context")
-customer_type = st.selectbox("Customer Type", ["Solo traveler", "Family"])
-age = st.number_input("Age", min_value=30, max_value=40, value=35)
-gender = st.selectbox("Gender", ["Male", "Female"])
+# -----------------------
+# MAIN LOGIC
+# -----------------------
+if run:
 
-# -------- Situation Context --------
-st.subheader("Situation Context")
-day_type = st.selectbox("Day Type", ["Weekday", "Weekend"])
-special_event = st.selectbox("Special Event", ["No", "Yes"])
-outside_temp = st.number_input("Outside Temperature (°C)", value=32.0)
+    vac = datetime.combine(datetime.today(), vacant_since_str)
+    now = datetime.combine(datetime.today(), current_time_str)
 
-# -------- Behavior Context --------
-st.subheader("Behavior Context")
-leave_time_band = st.selectbox(
-    "Leave Time Band",
-    ["Morning", "Afternoon", "Evening", "Night"]
-)
-
-# -------- Timing --------
-st.subheader("Room Status")
-vacant_since = st.time_input("Vacant Since", value=datetime.now().time())
-current_time = st.time_input("Current Time", value=datetime.now().time())
-
-# =========================
-# RUN LOGIC
-# =========================
-if st.button("Run Prediction"):
-
-    temp_band = get_temp_band(outside_temp)
-
-    # =========================
-    # Tiered Matching
-    # =========================
-
-    # Tier 1
+    # -----------------------
+    # MATCHING (Tier logic)
+    # -----------------------
     match = df[
         (df["customer_type"] == customer_type) &
         (df["day_type"] == day_type) &
         (df["leave_time_band"] == leave_time_band) &
-        (df["temp_band"] == temp_band) &
-        (df["gender"] == gender)
+        (df["temp_band"] == temp_band)
     ]
-
     tier = "Tier 1"
 
-    # Tier 2 fallback
     if len(match) < 5:
         match = df[
             (df["customer_type"] == customer_type) &
-            (df["day_type"] == day_type) &
-            (df["leave_time_band"] == leave_time_band) &
-            (df["temp_band"] == temp_band)
+            (df["day_type"] == day_type)
         ]
         tier = "Tier 2"
 
-    # Tier 3 fallback
     if len(match) < 5:
-        match = df[
-            (df["customer_type"] == customer_type) &
-            (df["day_type"] == day_type) &
-            (df["leave_time_band"] == leave_time_band)
-        ]
+        match = df
         tier = "Tier 3"
 
-    # =========================
-    # Handle no data
-    # =========================
-    if len(match) < 3:
-        st.error("❗ Not enough data — manual review required")
+    # -----------------------
+    # CALCULATIONS
+    # -----------------------
+    median = int(match["time_away_mins"].median())
+    p25 = int(match["time_away_mins"].quantile(0.25))
+    p75 = int(match["time_away_mins"].quantile(0.75))
+
+    elapsed = int((now - vac).total_seconds() / 60)
+    remaining = max(median - elapsed, 0)
+
+    decision = calculate_decision(remaining)
+
+    # Convert to HH:MM
+    expected_return_dt = vac + pd.Timedelta(minutes=median)
+    expected_return_time = expected_return_dt.strftime("%H:%M")
+
+    p25_time = (vac + pd.Timedelta(minutes=p25)).strftime("%H:%M")
+    p75_time = (vac + pd.Timedelta(minutes=p75)).strftime("%H:%M")
+
+    # Confidence logic
+    if len(match) > 20:
+        confidence = "High"
+    elif len(match) > 10:
+        confidence = "Medium"
     else:
-        # =========================
-        # Calculate metrics
-        # =========================
-        median = int(match["time_away_mins"].median())
-        p25 = int(match["time_away_mins"].quantile(0.25))
-        p75 = int(match["time_away_mins"].quantile(0.75))
+        confidence = "Low"
 
-        # =========================
-        # Compute time
-        # =========================
-        vac = datetime.combine(datetime.today(), vacant_since)
-        now = datetime.combine(datetime.today(), current_time)
+    tier_label = get_tier_label(tier)
 
-        current_duration = int((now - vac).total_seconds() / 60)
-        remaining = median - current_duration
+    # -----------------------
+    # OUTPUT (MAIN)
+    # -----------------------
+    st.subheader("📊 Output")
 
-        decision = calculate_decision(remaining)
+    st.write(f"**Expected Return Time:** {expected_return_time}")
+    st.write(f"**Confidence Level:** {confidence}")
+    st.write(f"**Recommended Action:** {decision}")
 
-        # =========================
-        # Behavior distribution
-        # =========================
+    # -----------------------
+    # SUPPORTING EXPLANATION
+    # -----------------------
+    st.divider()
+
+    st.subheader("🧠 Why this result")
+
+    st.write(f"Based on **{len(match)} similar cases**")
+    st.write(f"Confidence basis: **{tier_label}**")
+
+    st.write(
+        f"Matched scenario: **{customer_type} · {day_type} · {leave_time_band} · {temp_band}**"
+    )
+
+    st.write(f"Median return duration: **{median} mins**")
+
+    st.write("Typical return window:")
+    st.write(f"- 25% of guests return before **{p25_time}**")
+    st.write(f"- 75% of guests return before **{p75_time}**")
+
+    # -----------------------
+    # BEHAVIOR PATTERN (SAFE)
+    # -----------------------
+    if "scenario" in match.columns:
         pattern = (
             match["scenario"]
             .value_counts(normalize=True)
@@ -130,33 +149,11 @@ if st.button("Run Prediction"):
             .round(2)
         )
 
-        # =========================
-        # OUTPUT
-        # =========================
-        st.subheader("📊 Recommendation")
+        if len(pattern) > 0:
+            formatted = []
+            for k, v in pattern.items():
+                formatted.append(f"{int(v*100)}% {k.replace('_',' ').title()}")
 
-        st.markdown(f"## {decision}")
-
-        st.write(f"**Expected Duration:** {median} mins")
-        st.write(f"**Remaining Time:** {remaining} mins")
-        st.write(f"**Confidence Level:** {'High' if len(match)>20 else 'Medium'}")
-
-        st.divider()
-
-        st.subheader("🧠 Reason")
-        st.write(f"Based on {len(match)} similar cases ({tier})")
-        st.write(f"{customer_type} · {day_type} · {leave_time_band} · {temp_band}")
-
-        st.divider()
-
-        st.subheader("📈 Distribution")
-        st.write(f"P25: {p25} mins")
-        st.write(f"Median: {median} mins")
-        st.write(f"P75: {p75} mins")
-
-        st.divider()
-
-        st.subheader("🔥 Top Behavior Pattern")
-
-        for i, (k, v) in enumerate(pattern.items()):
-            st.write(f"{int(v*100)}% {k.replace('_',' ').title()}")
+            st.write("Top behavior patterns: " + " · ".join(formatted))
+    else:
+        st.write("Top behavior patterns: not available")
