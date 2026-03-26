@@ -6,7 +6,7 @@ from datetime import datetime
 # =========================
 # Load data
 # =========================
-df = pd.read_excel("precooling_historical_dataset.xlsx")
+df = pd.read_csv("precooling_historical_dataset_300rows_v2.csv")
 
 # =========================
 # Helper functions
