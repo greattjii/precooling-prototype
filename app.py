@@ -29,14 +29,27 @@ gender = st.selectbox("Gender", ["Male", "Female"])
 day_type = st.selectbox("Day Type", ["Weekday", "Weekend"])
 
 st.subheader("Environment")
-current_temp = st.number_input("Current Temperature (°C)", min_value=18.0, max_value=40.0, value=30.0, step=0.5)
+current_temp = st.number_input(
+    "Current Temperature (°C)",
+    min_value=18.0,
+    max_value=40.0,
+    value=30.0,
+    step=0.5
+)
 
 st.subheader("Room Status")
 guest_left_at = st.time_input("Guest Left At")
 
-# auto current time
-current_time = datetime.now()
+use_custom_time = st.checkbox("Adjust current time (for simulation)")
+
+if use_custom_time:
+    current_time_input = st.time_input("Set Current Time")
+    current_time = datetime.combine(datetime.today(), current_time_input)
+else:
+    current_time = datetime.now()
+
 st.write("**Current Time:**", current_time.strftime("%I:%M %p").lstrip("0"))
+st.caption("Use simulation mode to test different time scenarios.")
 
 run = st.button("Run Prediction")
 
@@ -44,7 +57,6 @@ run = st.button("Run Prediction")
 # HELPER FUNCTIONS
 # -----------------------
 def map_temp_band(temp: float) -> str:
-    # aligned to dataset
     if temp >= 35:
         return "High"
     elif temp >= 32:
@@ -94,7 +106,6 @@ def get_behavior_explanation(match_df: pd.DataFrame, elapsed: int, median: int) 
     if len(pattern) == 0:
         return "Top behavior patterns: not available"
 
-    # If overdue, avoid misleading short-return story
     if elapsed > median:
         return (
             "Historical data suggests shorter return patterns, but the current room has already "
@@ -103,7 +114,6 @@ def get_behavior_explanation(match_df: pd.DataFrame, elapsed: int, median: int) 
 
     short_patterns = {"quick_nap", "quick_return"}
 
-    # If already vacant a long time, suppress very short-return patterns from the explanation
     if elapsed > 180:
         pattern = pattern[~pattern.index.isin(short_patterns)]
 
@@ -120,7 +130,6 @@ if run:
     vac = datetime.combine(datetime.today(), guest_left_at)
     now = current_time
 
-    # Handle overnight case
     if now < vac:
         st.warning("Assuming Current Time is on the next day.")
         now = now + pd.Timedelta(days=1)
@@ -131,7 +140,6 @@ if run:
     # -----------------------
     # MATCHING
     # -----------------------
-    # Tier 1: most specific operational match
     match = df[
         (df["customer_type"] == customer_type) &
         (df["day_type"] == day_type) &
@@ -141,7 +149,6 @@ if run:
     ]
     tier = "Tier 1"
 
-    # Tier 2: relax temperature
     if len(match) < 5:
         match = df[
             (df["customer_type"] == customer_type) &
@@ -150,7 +157,6 @@ if run:
         ]
         tier = "Tier 2"
 
-    # Tier 3: broad pattern
     if len(match) < 5:
         match = df[
             (df["customer_type"] == customer_type) &
