@@ -1,0 +1,301 @@
+record_id,customer_id,room_id,customer_type,age,gender,date,day_type,special_event_flag,special_event_name,outside_temp_c,temp_band,scenario,leave_time,leave_time_band,return_time,return_date,overnight_return_flag,time_away_mins
+R100,CUST_011,108,Solo traveler,38,Male,2025-01-01,Weekday,No,,29.5,Low,work_day,09:50,Morning,18:05,2025-01-01,No,495
+R141,CUST_013,105,Solo traveler,39,Female,2025-01-01,Weekday,No,,30.9,Low,night_out,17:20,Evening,22:35,2025-01-01,No,315
+R084,CUST_017,108,Solo traveler,40,Female,2025-01-01,Weekday,No,,30.7,Low,day_trip,09:10,Morning,14:10,2025-01-01,No,300
+R070,CUST_029,105,Solo traveler,37,Male,2025-01-01,Weekday,No,,28.6,Low,quick_nap,15:40,Afternoon,17:15,2025-01-01,No,95
+R104,CUST_046,105,Family,36,Female,2025-01-02,Weekday,No,,33.5,Medium,family_day_out,10:40,Morning,18:20,2025-01-02,No,460
+R187,CUST_053,106,Family,37,Male,2025-01-02,Weekday,No,,29.3,Low,family_day_out,10:40,Morning,15:05,2025-01-02,No,265
+R053,CUST_018,102,Solo traveler,37,Female,2025-01-03,Weekday,No,,27.5,Low,day_trip,10:10,Morning,15:35,2025-01-03,No,325
+R076,CUST_026,105,Solo traveler,38,Female,2025-01-03,Weekday,No,,28.5,Low,work_day,08:20,Morning,18:25,2025-01-03,No,605
+R046,CUST_029,107,Solo traveler,37,Male,2025-01-03,Weekday,No,,29.1,Low,work_day,08:30,Morning,17:20,2025-01-03,No,530
+R004,CUST_034,104,Solo traveler,30,Male,2025-01-03,Weekday,No,,30.1,Low,work_day,09:40,Morning,19:45,2025-01-03,No,605
+R083,CUST_041,109,Family,36,Male,2025-01-03,Weekday,No,,32.2,Medium,park_pool_break,11:50,Morning,13:55,2025-01-03,No,125
+R060,CUST_052,105,Family,33,Male,2025-01-03,Weekday,No,,32.7,Medium,family_day_out,09:00,Morning,16:35,2025-01-03,No,455
+R081,CUST_006,101,Solo traveler,36,Male,2025-01-04,Weekend,No,,30.6,Low,night_out,18:40,Evening,23:55,2025-01-04,No,315
+R019,CUST_009,103,Solo traveler,40,Male,2025-01-04,Weekend,No,,31.2,Low,work_day,09:50,Morning,17:05,2025-01-04,No,435
+R010,CUST_023,101,Solo traveler,31,Female,2025-01-04,Weekend,No,,28.4,Low,night_out,19:50,Evening,01:10,2025-01-05,Yes,320
+R243,CUST_035,107,Solo traveler,32,Male,2025-01-04,Weekend,No,,31.5,Low,night_out,18:20,Evening,22:25,2025-01-04,No,245
+R034,CUST_036,102,Family,36,Female,2025-01-04,Weekend,No,,29.0,Low,family_day_out,10:40,Morning,14:40,2025-01-04,No,240
+R265,CUST_003,102,Solo traveler,38,Male,2025-01-05,Weekend,No,,29.9,Low,day_trip,11:30,Morning,18:15,2025-01-05,No,405
+R259,CUST_010,101,Solo traveler,30,Male,2025-01-05,Weekend,No,,27.5,Low,day_trip,09:10,Morning,14:25,2025-01-05,No,315
+R185,CUST_014,106,Solo traveler,31,Male,2025-01-05,Weekend,No,,33.4,Medium,day_trip,10:15,Morning,15:40,2025-01-05,No,325
+R131,CUST_037,105,Family,32,Female,2025-01-05,Weekend,No,,31.2,Low,quick_return,13:30,Afternoon,15:45,2025-01-05,No,135
+R261,CUST_002,103,Solo traveler,40,Male,2025-01-06,Weekday,No,,34.8,Medium,work_day,09:00,Morning,18:10,2025-01-06,No,550
+R130,CUST_036,101,Family,36,Female,2025-01-06,Weekday,No,,27.9,Low,family_evening_out,16:20,Afternoon,20:10,2025-01-06,No,230
+R202,CUST_054,108,Family,35,Male,2025-01-06,Weekday,No,,31.9,Low,family_evening_out,17:00,Evening,20:30,2025-01-06,No,210
+R107,CUST_007,105,Solo traveler,31,Female,2025-01-07,Weekday,No,,34.3,Medium,work_day,09:15,Morning,18:15,2025-01-07,No,540
+R272,CUST_031,109,Solo traveler,36,Female,2025-01-07,Weekday,No,,27.5,Low,quick_nap,14:10,Afternoon,15:35,2025-01-07,No,85
+R112,CUST_032,109,Solo traveler,37,Female,2025-01-07,Weekday,No,,30.9,Low,night_out,18:15,Evening,21:30,2025-01-07,No,195
+R230,CUST_040,105,Family,36,Female,2025-01-07,Weekday,No,,30.1,Low,park_pool_break,14:30,Afternoon,16:40,2025-01-07,No,130
+R244,CUST_011,102,Solo traveler,38,Male,2025-01-08,Weekday,No,,29.0,Low,quick_nap,13:20,Afternoon,14:05,2025-01-08,No,45
+R218,CUST_002,110,Solo traveler,40,Male,2025-01-09,Weekday,No,,28.2,Low,work_day,09:10,Morning,17:55,2025-01-09,No,525
+R177,CUST_021,107,Solo traveler,38,Female,2025-01-09,Weekday,No,,28.7,Low,quick_nap,15:20,Afternoon,16:40,2025-01-09,No,80
+R168,CUST_027,101,Solo traveler,35,Female,2025-01-09,Weekday,No,,29.4,Low,quick_nap,16:40,Afternoon,18:05,2025-01-09,No,85
+R158,CUST_030,101,Solo traveler,34,Female,2025-01-09,Weekday,No,,33.0,Medium,day_trip,10:20,Morning,14:15,2025-01-09,No,235
+R047,CUST_033,102,Solo traveler,39,Male,2025-01-09,Weekday,No,,32.1,Medium,day_trip,09:10,Morning,14:20,2025-01-09,No,310
+R262,CUST_045,101,Family,34,Male,2025-01-09,Weekday,No,,32.6,Medium,family_day_out,09:40,Morning,15:25,2025-01-09,No,345
+R159,CUST_048,110,Family,38,Male,2025-01-09,Weekday,No,,30.8,Low,park_pool_break,12:40,Afternoon,14:45,2025-01-09,No,125
+R133,CUST_007,105,Solo traveler,31,Female,2025-01-10,Weekday,No,,31.0,Low,night_out,18:45,Evening,22:10,2025-01-10,No,205
+R086,CUST_017,105,Solo traveler,40,Female,2025-01-10,Weekday,No,,28.3,Low,day_trip,09:20,Morning,16:10,2025-01-10,No,410
+R095,CUST_030,109,Solo traveler,34,Female,2025-01-10,Weekday,No,,27.8,Low,day_trip,10:30,Morning,15:55,2025-01-10,No,325
+R094,CUST_020,108,Solo traveler,33,Male,2025-01-11,Weekend,No,,34.8,Medium,day_trip,09:30,Morning,15:15,2025-01-11,No,345
+R073,CUST_025,108,Solo traveler,36,Male,2025-01-11,Weekend,No,,32.7,Medium,day_trip,10:20,Morning,16:30,2025-01-11,No,370
+R170,CUST_040,104,Family,36,Female,2025-01-11,Weekend,No,,29.1,Low,family_day_out,09:45,Morning,16:25,2025-01-11,No,400
+R229,CUST_049,108,Family,40,Female,2025-01-11,Weekend,No,,33.9,Medium,family_day_out,09:15,Morning,16:20,2025-01-11,No,425
+R006,CUST_042,105,Family,31,Male,2025-01-12,Weekend,No,,32.3,Medium,family_day_out,11:40,Morning,18:35,2025-01-12,No,415
+R196,CUST_053,107,Family,37,Male,2025-01-12,Weekend,No,,30.5,Low,park_pool_break,14:40,Afternoon,16:30,2025-01-12,No,110
+R075,CUST_053,103,Family,37,Male,2025-01-12,Weekend,No,,30.3,Low,quick_return,15:00,Afternoon,16:50,2025-01-12,No,110
+R280,CUST_023,107,Solo traveler,31,Female,2025-01-13,Weekday,No,,32.5,Medium,work_day,08:10,Morning,16:45,2025-01-13,No,515
+R190,CUST_027,107,Solo traveler,35,Female,2025-01-13,Weekday,No,,30.8,Low,quick_nap,14:10,Afternoon,15:20,2025-01-13,No,70
+R239,CUST_029,102,Solo traveler,37,Male,2025-01-13,Weekday,No,,29.9,Low,quick_nap,14:30,Afternoon,15:15,2025-01-13,No,45
+R266,CUST_031,103,Solo traveler,36,Female,2025-01-13,Weekday,No,,31.8,Low,work_day,07:20,Morning,17:00,2025-01-13,No,580
+R152,CUST_011,101,Solo traveler,38,Male,2025-01-14,Weekday,No,,29.0,Low,day_trip,09:30,Morning,14:10,2025-01-14,No,280
+R128,CUST_016,104,Solo traveler,39,Male,2025-01-14,Weekday,No,,30.7,Low,work_day,07:15,Morning,16:25,2025-01-14,No,550
+R214,CUST_026,102,Solo traveler,38,Female,2025-01-14,Weekday,No,,32.8,Medium,quick_nap,14:40,Afternoon,16:00,2025-01-14,No,80
+R291,CUST_047,103,Family,39,Female,2025-01-14,Weekday,No,,32.2,Medium,family_day_out,11:10,Morning,16:15,2025-01-14,No,305
+R032,CUST_051,109,Family,37,Female,2025-01-14,Weekday,No,,34.5,Medium,family_evening_out,16:20,Afternoon,19:15,2025-01-14,No,175
+R001,CUST_008,108,Solo traveler,39,Male,2025-01-15,Weekday,No,,34.0,Medium,day_trip,10:50,Morning,15:15,2025-01-15,No,265
+R038,CUST_027,107,Solo traveler,35,Female,2025-01-16,Weekday,No,,31.9,Low,work_day,08:40,Morning,18:00,2025-01-16,No,560
+R030,CUST_040,109,Family,36,Female,2025-01-16,Weekday,No,,29.7,Low,family_evening_out,16:40,Afternoon,21:00,2025-01-16,No,260
+R300,CUST_042,108,Family,31,Male,2025-01-16,Weekday,No,,31.1,Low,family_day_out,10:40,Morning,17:30,2025-01-16,No,410
+R219,CUST_013,108,Solo traveler,39,Female,2025-01-17,Weekday,No,,32.4,Medium,day_trip,10:15,Morning,13:40,2025-01-17,No,205
+R056,CUST_040,101,Family,36,Female,2025-01-17,Weekday,No,,28.7,Low,family_evening_out,18:20,Evening,21:50,2025-01-17,No,210
+R049,CUST_049,107,Family,40,Female,2025-01-17,Weekday,No,,32.7,Medium,family_day_out,11:30,Morning,17:50,2025-01-17,No,380
+R066,CUST_054,101,Family,35,Male,2025-01-17,Weekday,No,,32.4,Medium,family_day_out,09:30,Morning,14:40,2025-01-17,No,310
+R238,CUST_011,101,Solo traveler,38,Male,2025-01-18,Weekend,No,,32.8,Medium,day_trip,09:15,Morning,13:30,2025-01-18,No,255
+R297,CUST_002,105,Solo traveler,40,Male,2025-01-19,Weekend,No,,34.8,Medium,day_trip,11:45,Morning,18:30,2025-01-19,No,405
+R198,CUST_036,107,Family,36,Female,2025-01-19,Weekend,No,,33.4,Medium,family_day_out,09:40,Morning,13:05,2025-01-19,No,205
+R147,CUST_039,107,Family,36,Female,2025-01-19,Weekend,No,,31.9,Low,family_day_out,09:00,Morning,12:30,2025-01-19,No,210
+R089,CUST_039,106,Family,36,Female,2025-01-19,Weekend,No,,32.3,Medium,family_day_out,10:30,Morning,16:00,2025-01-19,No,330
+R232,CUST_015,105,Solo traveler,31,Male,2025-01-20,Weekday,No,,31.9,Low,quick_nap,16:45,Afternoon,17:30,2025-01-20,No,45
+R050,CUST_026,109,Solo traveler,38,Female,2025-01-20,Weekday,No,,29.3,Low,work_day,09:50,Morning,17:55,2025-01-20,No,485
+R029,CUST_050,103,Family,36,Female,2025-01-20,Weekday,No,,30.7,Low,quick_return,13:50,Afternoon,14:35,2025-01-20,No,45
+R057,CUST_008,105,Solo traveler,39,Male,2025-01-21,Weekday,No,,31.0,Low,day_trip,09:15,Morning,12:10,2025-01-21,No,175
+R067,CUST_028,101,Solo traveler,31,Male,2025-01-21,Weekday,No,,31.5,Low,night_out,17:45,Evening,23:20,2025-01-21,No,335
+R197,CUST_030,103,Solo traveler,34,Female,2025-01-21,Weekday,No,,32.9,Medium,work_day,07:00,Morning,15:25,2025-01-21,No,505
+R277,CUST_037,105,Family,32,Female,2025-01-21,Weekday,No,,30.4,Low,family_evening_out,16:20,Afternoon,19:55,2025-01-21,No,215
+R260,CUST_040,106,Family,36,Female,2025-01-21,Weekday,No,,28.4,Low,family_day_out,09:00,Morning,15:10,2025-01-21,No,370
+R116,CUST_042,102,Family,31,Male,2025-01-21,Weekday,No,,28.7,Low,park_pool_break,11:50,Morning,13:30,2025-01-21,No,100
+R191,CUST_042,107,Family,31,Male,2025-01-21,Weekday,No,,27.6,Low,park_pool_break,12:45,Afternoon,15:25,2025-01-21,No,160
+R149,CUST_006,106,Solo traveler,36,Male,2025-01-22,Weekday,No,,29.0,Low,night_out,18:15,Evening,22:25,2025-01-22,No,250
+R242,CUST_016,101,Solo traveler,39,Male,2025-01-22,Weekday,No,,29.8,Low,night_out,17:00,Evening,21:45,2025-01-22,No,285
+R278,CUST_032,102,Solo traveler,37,Female,2025-01-22,Weekday,No,,30.7,Low,night_out,17:50,Evening,22:15,2025-01-22,No,265
+R007,CUST_059,106,Family,40,Female,2025-01-22,Weekday,No,,32.0,Medium,family_day_out,09:40,Morning,15:50,2025-01-22,No,370
+R224,CUST_013,107,Solo traveler,39,Female,2025-01-24,Weekday,No,,32.8,Medium,night_out,18:30,Evening,22:45,2025-01-24,No,255
+R011,CUST_017,110,Solo traveler,40,Female,2025-01-25,Weekend,No,,30.3,Low,quick_nap,15:50,Afternoon,16:35,2025-01-25,No,45
+R207,CUST_047,101,Family,39,Female,2025-01-25,Weekend,No,,31.0,Low,quick_return,16:00,Afternoon,17:55,2025-01-25,No,115
+R023,CUST_056,104,Family,31,Female,2025-01-25,Weekend,No,,30.8,Low,family_day_out,09:30,Morning,18:35,2025-01-25,No,545
+R044,CUST_027,106,Solo traveler,35,Female,2025-01-26,Weekend,No,,32.6,Medium,work_day,08:10,Morning,14:35,2025-01-26,No,385
+R142,CUST_032,105,Solo traveler,37,Female,2025-01-26,Weekend,No,,29.7,Low,night_out,18:20,Evening,23:05,2025-01-26,No,285
+R167,CUST_033,107,Solo traveler,39,Male,2025-01-26,Weekend,No,,28.9,Low,day_trip,09:20,Morning,16:15,2025-01-26,No,415
+R274,CUST_034,105,Solo traveler,30,Male,2025-01-26,Weekend,No,,32.1,Medium,quick_nap,13:00,Afternoon,14:15,2025-01-26,No,75
+R016,CUST_051,108,Family,37,Female,2025-01-26,Weekend,No,,30.1,Low,family_day_out,09:45,Morning,18:40,2025-01-26,No,535
+R186,CUST_003,105,Solo traveler,38,Male,2025-01-27,Weekday,No,,31.4,Low,day_trip,09:20,Morning,14:55,2025-01-27,No,335
+R237,CUST_009,106,Solo traveler,40,Male,2025-01-27,Weekday,No,,31.1,Low,work_day,09:50,Morning,19:15,2025-01-27,No,565
+R096,CUST_025,104,Solo traveler,36,Male,2025-01-27,Weekday,No,,31.0,Low,quick_nap,13:10,Afternoon,14:15,2025-01-27,No,65
+R064,CUST_045,104,Family,34,Male,2025-01-28,Weekday,No,,27.5,Low,family_day_out,10:20,Morning,14:20,2025-01-28,No,240
+R092,CUST_045,108,Family,34,Male,2025-01-28,Weekday,No,,32.2,Medium,family_day_out,10:30,Morning,16:05,2025-01-28,No,335
+R249,CUST_012,102,Solo traveler,36,Male,2025-01-29,Weekday,Yes,Chinese New Year,30.1,Low,day_trip,10:20,Morning,14:50,2025-01-29,No,270
+R134,CUST_017,110,Solo traveler,40,Female,2025-01-29,Weekday,Yes,Chinese New Year,31.4,Low,quick_nap,13:00,Afternoon,16:20,2025-01-29,No,200
+R143,CUST_030,105,Solo traveler,34,Female,2025-01-29,Weekday,Yes,Chinese New Year,33.4,Medium,quick_nap,15:10,Afternoon,18:30,2025-01-29,No,200
+R236,CUST_035,107,Solo traveler,32,Male,2025-01-29,Weekday,Yes,Chinese New Year,29.1,Low,day_trip,11:30,Morning,18:40,2025-01-29,No,430
+R117,CUST_036,108,Family,36,Female,2025-01-29,Weekday,Yes,Chinese New Year,30.5,Low,family_day_out,10:50,Morning,19:00,2025-01-29,No,490
+R054,CUST_039,102,Family,36,Female,2025-01-29,Weekday,Yes,Chinese New Year,30.3,Low,family_day_out,10:10,Morning,17:35,2025-01-29,No,445
+R008,CUST_041,110,Family,36,Male,2025-01-29,Weekday,Yes,Chinese New Year,32.6,Medium,family_day_out,09:20,Morning,17:20,2025-01-29,No,480
+R204,CUST_041,110,Family,36,Male,2025-01-29,Weekday,Yes,Chinese New Year,33.3,Medium,family_day_out,10:20,Morning,15:55,2025-01-29,No,335
+R220,CUST_044,102,Family,37,Male,2025-01-29,Weekday,Yes,Chinese New Year,32.4,Medium,family_day_out,10:30,Morning,19:10,2025-01-29,No,520
+R180,CUST_031,108,Solo traveler,36,Female,2025-01-30,Weekday,No,,28.9,Low,quick_nap,15:00,Afternoon,15:45,2025-01-30,No,45
+R257,CUST_047,110,Family,39,Female,2025-01-30,Weekday,No,,32.4,Medium,family_day_out,10:20,Morning,16:30,2025-01-30,No,370
+R009,CUST_048,104,Family,38,Male,2025-01-30,Weekday,No,,34.0,Medium,family_evening_out,18:50,Evening,22:55,2025-01-30,No,245
+R299,CUST_055,110,Family,30,Male,2025-01-30,Weekday,No,,28.4,Low,park_pool_break,11:15,Morning,13:05,2025-01-30,No,110
+R290,CUST_011,106,Solo traveler,38,Male,2025-01-31,Weekday,No,,28.3,Low,day_trip,09:30,Morning,14:30,2025-01-31,No,300
+R176,CUST_016,103,Solo traveler,39,Male,2025-01-31,Weekday,No,,31.6,Low,work_day,08:20,Morning,17:55,2025-01-31,No,575
+R255,CUST_039,107,Family,36,Female,2025-01-31,Weekday,No,,32.4,Medium,family_day_out,11:50,Morning,16:55,2025-01-31,No,305
+R298,CUST_001,107,Solo traveler,35,Male,2025-02-01,Weekend,No,,33.0,Medium,day_trip,11:45,Morning,17:25,2025-02-01,No,340
+R264,CUST_007,104,Solo traveler,31,Female,2025-02-01,Weekend,No,,34.2,Medium,night_out,18:10,Evening,22:50,2025-02-01,No,280
+R124,CUST_018,107,Solo traveler,37,Female,2025-02-01,Weekend,No,,28.3,Low,quick_nap,16:50,Afternoon,18:15,2025-02-01,No,85
+R210,CUST_038,107,Family,38,Female,2025-02-01,Weekend,No,,30.9,Low,family_day_out,10:40,Morning,18:10,2025-02-01,No,450
+R041,CUST_010,103,Solo traveler,30,Male,2025-02-02,Weekend,No,,35.4,High,day_trip,10:20,Morning,15:40,2025-02-02,No,320
+R268,CUST_023,105,Solo traveler,31,Female,2025-02-02,Weekend,No,,33.7,Medium,day_trip,09:40,Morning,15:20,2025-02-02,No,340
+R048,CUST_006,105,Solo traveler,36,Male,2025-02-03,Weekday,No,,35.1,High,day_trip,09:15,Morning,13:45,2025-02-03,No,270
+R253,CUST_011,104,Solo traveler,38,Male,2025-02-03,Weekday,No,,31.6,Low,work_day,09:20,Morning,19:30,2025-02-03,No,610
+R282,CUST_020,107,Solo traveler,33,Male,2025-02-03,Weekday,No,,34.7,Medium,day_trip,11:15,Morning,17:00,2025-02-03,No,345
+R240,CUST_026,101,Solo traveler,38,Female,2025-02-03,Weekday,No,,28.7,Low,day_trip,09:40,Morning,14:10,2025-02-03,No,270
+R175,CUST_048,104,Family,38,Male,2025-02-03,Weekday,No,,35.0,High,family_day_out,10:20,Morning,13:50,2025-02-03,No,210
+R108,CUST_016,107,Solo traveler,39,Male,2025-02-04,Weekday,No,,30.5,Low,day_trip,11:40,Morning,17:45,2025-02-04,No,365
+R122,CUST_025,106,Solo traveler,36,Male,2025-02-04,Weekday,No,,33.0,Medium,night_out,17:50,Evening,22:00,2025-02-04,No,250
+R033,CUST_013,101,Solo traveler,39,Female,2025-02-05,Weekday,No,,33.3,Medium,work_day,07:50,Morning,17:25,2025-02-05,No,575
+R273,CUST_037,103,Family,32,Female,2025-02-06,Weekday,No,,31.0,Low,family_day_out,10:00,Morning,14:00,2025-02-06,No,240
+R270,CUST_055,110,Family,30,Male,2025-02-06,Weekday,No,,30.7,Low,park_pool_break,10:45,Morning,12:30,2025-02-06,No,105
+R024,CUST_014,109,Solo traveler,31,Male,2025-02-07,Weekday,No,,30.0,Low,night_out,18:40,Evening,22:05,2025-02-07,No,205
+R181,CUST_057,104,Family,30,Male,2025-02-07,Weekday,No,,30.4,Low,family_day_out,09:00,Morning,13:20,2025-02-07,No,260
+R288,CUST_018,110,Solo traveler,37,Female,2025-02-08,Weekend,No,,29.8,Low,night_out,18:15,Evening,01:05,2025-02-09,Yes,410
+R101,CUST_026,103,Solo traveler,38,Female,2025-02-08,Weekend,No,,28.2,Low,quick_nap,16:40,Afternoon,18:15,2025-02-08,No,95
+R040,CUST_043,102,Family,33,Male,2025-02-08,Weekend,No,,30.9,Low,quick_return,13:40,Afternoon,14:55,2025-02-08,No,75
+R293,CUST_047,107,Family,39,Female,2025-02-08,Weekend,No,,33.6,Medium,family_evening_out,17:20,Evening,23:30,2025-02-08,No,370
+R165,CUST_052,103,Family,33,Male,2025-02-08,Weekend,No,,32.5,Medium,family_day_out,11:20,Morning,18:00,2025-02-08,No,400
+R058,CUST_013,105,Solo traveler,39,Female,2025-02-09,Weekend,No,,35.1,High,night_out,18:30,Evening,22:35,2025-02-09,No,245
+R154,CUST_023,107,Solo traveler,31,Female,2025-02-09,Weekend,No,,33.1,Medium,night_out,17:00,Evening,22:50,2025-02-09,No,350
+R125,CUST_028,101,Solo traveler,31,Male,2025-02-09,Weekend,No,,32.2,Medium,quick_nap,14:00,Afternoon,15:15,2025-02-09,No,75
+R002,CUST_031,102,Solo traveler,36,Female,2025-02-09,Weekend,No,,32.5,Medium,work_day,07:10,Morning,17:05,2025-02-09,No,595
+R267,CUST_019,106,Solo traveler,34,Male,2025-02-10,Weekday,No,,35.2,High,night_out,20:30,Evening,00:50,2025-02-11,Yes,260
+R166,CUST_021,108,Solo traveler,38,Female,2025-02-10,Weekday,No,,32.5,Medium,work_day,08:10,Morning,17:35,2025-02-10,No,565
+R102,CUST_025,102,Solo traveler,36,Male,2025-02-10,Weekday,No,,29.2,Low,work_day,08:00,Morning,16:45,2025-02-10,No,525
+R254,CUST_011,104,Solo traveler,38,Male,2025-02-11,Weekday,No,,27.9,Low,quick_nap,16:40,Afternoon,17:40,2025-02-11,No,60
+R289,CUST_016,110,Solo traveler,39,Male,2025-02-11,Weekday,No,,34.1,Medium,day_trip,11:40,Morning,15:20,2025-02-11,No,220
+R071,CUST_036,104,Family,36,Female,2025-02-11,Weekday,No,,28.6,Low,park_pool_break,10:30,Morning,14:10,2025-02-11,No,220
+R208,CUST_043,102,Family,33,Male,2025-02-11,Weekday,No,,30.4,Low,family_day_out,10:50,Morning,16:00,2025-02-11,No,310
+R225,CUST_044,107,Family,37,Male,2025-02-11,Weekday,No,,32.7,Medium,family_day_out,09:30,Morning,16:35,2025-02-11,No,425
+R051,CUST_045,102,Family,34,Male,2025-02-11,Weekday,No,,31.4,Low,family_day_out,10:00,Morning,16:15,2025-02-11,No,375
+R078,CUST_049,108,Family,40,Female,2025-02-11,Weekday,No,,31.5,Low,park_pool_break,11:30,Morning,14:10,2025-02-11,No,160
+R269,CUST_059,110,Family,40,Female,2025-02-11,Weekday,No,,32.6,Medium,family_evening_out,18:50,Evening,22:35,2025-02-11,No,225
+R250,CUST_008,105,Solo traveler,39,Male,2025-02-12,Weekday,No,,29.6,Low,day_trip,11:00,Morning,15:45,2025-02-12,No,285
+R287,CUST_009,108,Solo traveler,40,Male,2025-02-12,Weekday,No,,30.6,Low,quick_nap,14:20,Afternoon,15:05,2025-02-12,No,45
+R160,CUST_018,110,Solo traveler,37,Female,2025-02-12,Weekday,No,,32.1,Medium,quick_nap,13:30,Afternoon,14:15,2025-02-12,No,45
+R055,CUST_001,109,Solo traveler,35,Male,2025-02-13,Weekday,No,,30.1,Low,day_trip,10:30,Morning,14:55,2025-02-13,No,265
+R119,CUST_012,109,Solo traveler,36,Male,2025-02-13,Weekday,No,,33.0,Medium,day_trip,09:40,Morning,13:00,2025-02-13,No,200
+R103,CUST_021,107,Solo traveler,38,Female,2025-02-13,Weekday,No,,29.1,Low,quick_nap,13:20,Afternoon,14:30,2025-02-13,No,70
+R003,CUST_048,105,Family,38,Male,2025-02-13,Weekday,No,,32.3,Medium,family_evening_out,17:15,Evening,19:55,2025-02-13,No,160
+R153,CUST_006,107,Solo traveler,36,Male,2025-02-14,Weekday,Yes,Valentine's Day,33.3,Medium,night_out,17:20,Evening,23:55,2025-02-14,No,395
+R012,CUST_052,106,Family,33,Male,2025-02-14,Weekday,Yes,Valentine's Day,33.2,Medium,family_day_out,09:20,Morning,17:20,2025-02-14,No,480
+R072,CUST_014,103,Solo traveler,31,Male,2025-02-15,Weekend,No,,32.5,Medium,quick_nap,13:40,Afternoon,14:40,2025-02-15,No,60
+R206,CUST_025,102,Solo traveler,36,Male,2025-02-15,Weekend,No,,34.1,Medium,day_trip,09:20,Morning,13:10,2025-02-15,No,230
+R235,CUST_037,105,Family,32,Female,2025-02-15,Weekend,No,,32.9,Medium,family_day_out,09:40,Morning,16:45,2025-02-15,No,425
+R026,CUST_059,108,Family,40,Female,2025-02-15,Weekend,No,,33.5,Medium,family_evening_out,18:45,Evening,00:00,2025-02-16,Yes,315
+R156,CUST_021,108,Solo traveler,38,Female,2025-02-16,Weekend,No,,33.0,Medium,day_trip,09:45,Morning,16:35,2025-02-16,No,410
+R215,CUST_028,102,Solo traveler,31,Male,2025-02-16,Weekend,No,,30.6,Low,night_out,20:00,Evening,02:05,2025-02-17,Yes,365
+R233,CUST_033,101,Solo traveler,39,Male,2025-02-16,Weekend,No,,31.8,Low,day_trip,09:50,Morning,14:20,2025-02-16,No,270
+R045,CUST_047,101,Family,39,Female,2025-02-16,Weekend,No,,32.3,Medium,family_evening_out,17:50,Evening,22:15,2025-02-16,No,265
+R194,CUST_056,104,Family,31,Female,2025-02-16,Weekend,No,,36.0,High,family_day_out,10:45,Morning,18:05,2025-02-16,No,440
+R109,CUST_013,107,Solo traveler,39,Female,2025-02-17,Weekday,No,,29.4,Low,night_out,17:45,Evening,22:30,2025-02-17,No,285
+R120,CUST_016,105,Solo traveler,39,Male,2025-02-17,Weekday,No,,31.6,Low,quick_nap,14:00,Afternoon,14:50,2025-02-17,No,50
+R228,CUST_025,110,Solo traveler,36,Male,2025-02-17,Weekday,No,,36.4,High,work_day,07:40,Morning,16:20,2025-02-17,No,520
+R082,CUST_007,108,Solo traveler,31,Female,2025-02-18,Weekday,No,,32.3,Medium,work_day,09:00,Morning,17:10,2025-02-18,No,490
+R151,CUST_043,106,Family,33,Male,2025-02-18,Weekday,No,,31.0,Low,park_pool_break,12:50,Afternoon,15:50,2025-02-18,No,180
+R292,CUST_013,103,Solo traveler,39,Female,2025-02-19,Weekday,No,,27.5,Low,night_out,18:30,Evening,23:00,2025-02-19,No,270
+R295,CUST_057,108,Family,30,Male,2025-02-19,Weekday,No,,33.1,Medium,family_day_out,09:00,Morning,14:55,2025-02-19,No,355
+R105,CUST_005,107,Solo traveler,30,Male,2025-02-20,Weekday,No,,33.2,Medium,work_day,09:10,Morning,18:10,2025-02-20,No,540
+R127,CUST_005,109,Solo traveler,30,Male,2025-02-20,Weekday,No,,33.4,Medium,day_trip,10:50,Morning,17:00,2025-02-20,No,370
+R148,CUST_012,108,Solo traveler,36,Male,2025-02-20,Weekday,No,,30.8,Low,night_out,19:10,Evening,23:25,2025-02-20,No,255
+R146,CUST_060,101,Family,39,Female,2025-02-20,Weekday,No,,30.5,Low,family_day_out,09:00,Morning,14:45,2025-02-20,No,345
+R018,CUST_030,102,Solo traveler,34,Female,2025-02-21,Weekday,No,,32.7,Medium,quick_nap,14:15,Afternoon,16:05,2025-02-21,No,110
+R111,CUST_004,108,Solo traveler,39,Male,2025-02-22,Weekend,No,,31.1,Low,night_out,18:30,Evening,22:55,2025-02-22,No,265
+R245,CUST_010,104,Solo traveler,30,Male,2025-02-22,Weekend,No,,34.1,Medium,day_trip,11:45,Morning,18:25,2025-02-22,No,400
+R121,CUST_048,107,Family,38,Male,2025-02-22,Weekend,No,,29.8,Low,family_day_out,10:20,Morning,16:30,2025-02-22,No,370
+R113,CUST_031,106,Solo traveler,36,Female,2025-02-23,Weekend,No,,30.9,Low,day_trip,10:30,Morning,16:50,2025-02-23,No,380
+R169,CUST_011,102,Solo traveler,38,Male,2025-02-24,Weekday,No,,34.2,Medium,day_trip,09:30,Morning,15:35,2025-02-24,No,365
+R106,CUST_024,105,Solo traveler,35,Male,2025-02-24,Weekday,No,,33.7,Medium,night_out,17:30,Evening,22:25,2025-02-24,No,295
+R139,CUST_043,106,Family,33,Male,2025-02-24,Weekday,No,,30.7,Low,family_evening_out,16:50,Afternoon,20:35,2025-02-24,No,225
+R195,CUST_001,103,Solo traveler,35,Male,2025-02-25,Weekday,No,,33.3,Medium,quick_nap,16:10,Afternoon,16:55,2025-02-25,No,45
+R271,CUST_002,109,Solo traveler,40,Male,2025-02-25,Weekday,No,,32.7,Medium,night_out,17:40,Evening,23:00,2025-02-25,No,320
+R043,CUST_011,109,Solo traveler,38,Male,2025-02-25,Weekday,No,,30.1,Low,work_day,08:40,Morning,17:50,2025-02-25,No,550
+R248,CUST_025,108,Solo traveler,36,Male,2025-02-25,Weekday,No,,34.8,Medium,night_out,17:50,Evening,22:35,2025-02-25,No,285
+R296,CUST_026,104,Solo traveler,38,Female,2025-02-25,Weekday,No,,33.5,Medium,quick_nap,15:50,Afternoon,17:00,2025-02-25,No,70
+R028,CUST_056,103,Family,31,Female,2025-02-26,Weekday,No,,34.2,Medium,park_pool_break,14:00,Afternoon,16:50,2025-02-26,No,170
+R171,CUST_032,103,Solo traveler,37,Female,2025-02-27,Weekday,No,,31.3,Low,quick_nap,14:15,Afternoon,15:25,2025-02-27,No,70
+R062,CUST_060,102,Family,39,Female,2025-02-27,Weekday,No,,34.6,Medium,family_day_out,11:45,Morning,18:35,2025-02-27,No,410
+R069,CUST_003,103,Solo traveler,38,Male,2025-02-28,Weekday,No,,31.8,Low,day_trip,09:30,Morning,15:50,2025-02-28,No,380
+R135,CUST_020,105,Solo traveler,33,Male,2025-02-28,Weekday,No,,34.0,Medium,work_day,08:20,Morning,17:15,2025-02-28,No,535
+R172,CUST_027,110,Solo traveler,35,Female,2025-02-28,Weekday,No,,30.9,Low,day_trip,11:20,Morning,14:55,2025-02-28,No,215
+R093,CUST_030,108,Solo traveler,34,Female,2025-03-01,Weekend,No,,33.2,Medium,day_trip,09:20,Morning,14:10,2025-03-01,No,290
+R179,CUST_042,101,Family,31,Male,2025-03-01,Weekend,No,,32.4,Medium,family_day_out,09:00,Morning,13:45,2025-03-01,No,285
+R163,CUST_007,108,Solo traveler,31,Female,2025-03-02,Weekend,No,,35.3,High,work_day,08:30,Morning,16:10,2025-03-02,No,460
+R013,CUST_015,104,Solo traveler,31,Male,2025-03-02,Weekend,No,,31.0,Low,quick_nap,15:20,Afternoon,16:45,2025-03-02,No,85
+R126,CUST_028,110,Solo traveler,31,Male,2025-03-02,Weekend,No,,32.7,Medium,quick_nap,16:00,Afternoon,17:10,2025-03-02,No,70
+R155,CUST_046,104,Family,36,Female,2025-03-02,Weekend,No,,37.9,High,family_day_out,10:50,Morning,16:35,2025-03-02,No,345
+R088,CUST_005,105,Solo traveler,30,Male,2025-03-03,Weekday,No,,36.3,High,day_trip,09:20,Morning,10:05,2025-03-03,No,45
+R115,CUST_020,109,Solo traveler,33,Male,2025-03-03,Weekday,No,,35.1,High,quick_nap,16:10,Afternoon,17:15,2025-03-03,No,65
+R091,CUST_004,105,Solo traveler,39,Male,2025-03-04,Weekday,No,,33.7,Medium,day_trip,11:10,Morning,15:55,2025-03-04,No,285
+R275,CUST_023,102,Solo traveler,31,Female,2025-03-04,Weekday,No,,33.1,Medium,day_trip,10:15,Morning,15:45,2025-03-04,No,330
+R201,CUST_025,104,Solo traveler,36,Male,2025-03-04,Weekday,No,,34.1,Medium,work_day,08:15,Morning,18:25,2025-03-04,No,610
+R042,CUST_026,103,Solo traveler,38,Female,2025-03-04,Weekday,No,,34.9,Medium,day_trip,11:20,Morning,15:10,2025-03-04,No,230
+R138,CUST_013,107,Solo traveler,39,Female,2025-03-05,Weekday,No,,35.2,High,day_trip,09:30,Morning,14:25,2025-03-05,No,295
+R099,CUST_015,108,Solo traveler,31,Male,2025-03-05,Weekday,No,,34.9,Medium,quick_nap,16:00,Afternoon,17:00,2025-03-05,No,60
+R063,CUST_043,109,Family,33,Male,2025-03-05,Weekday,No,,32.1,Medium,family_evening_out,17:30,Evening,20:55,2025-03-05,No,205
+R189,CUST_051,109,Family,37,Female,2025-03-05,Weekday,No,,32.2,Medium,family_day_out,10:10,Morning,15:45,2025-03-05,No,335
+R164,CUST_053,103,Family,37,Male,2025-03-05,Weekday,No,,36.5,High,park_pool_break,13:15,Afternoon,15:45,2025-03-05,No,150
+R061,CUST_002,109,Solo traveler,40,Male,2025-03-06,Weekday,No,,37.3,High,work_day,07:50,Morning,15:15,2025-03-06,No,445
+R074,CUST_016,101,Solo traveler,39,Male,2025-03-06,Weekday,No,,32.6,Medium,night_out,17:30,Evening,23:15,2025-03-06,No,345
+R222,CUST_017,108,Solo traveler,40,Female,2025-03-06,Weekday,No,,33.7,Medium,day_trip,09:30,Morning,16:00,2025-03-06,No,390
+R211,CUST_029,108,Solo traveler,37,Male,2025-03-06,Weekday,No,,30.6,Low,work_day,07:00,Morning,14:20,2025-03-06,No,440
+R223,CUST_040,104,Family,36,Female,2025-03-06,Weekday,No,,35.1,High,family_day_out,10:40,Morning,15:15,2025-03-06,No,275
+R035,CUST_040,110,Family,36,Female,2025-03-06,Weekday,No,,38.1,High,park_pool_break,14:20,Afternoon,17:05,2025-03-06,No,165
+R199,CUST_048,103,Family,38,Male,2025-03-06,Weekday,No,,35.6,High,quick_return,13:40,Afternoon,15:10,2025-03-06,No,90
+R027,CUST_053,103,Family,37,Male,2025-03-06,Weekday,No,,36.7,High,park_pool_break,14:15,Afternoon,16:30,2025-03-06,No,135
+R068,CUST_056,105,Family,31,Female,2025-03-06,Weekday,No,,38.2,High,family_day_out,11:20,Morning,17:25,2025-03-06,No,365
+R183,CUST_024,103,Solo traveler,35,Male,2025-03-07,Weekday,No,,32.7,Medium,day_trip,10:30,Morning,14:35,2025-03-07,No,245
+R036,CUST_029,109,Solo traveler,37,Male,2025-03-07,Weekday,No,,35.3,High,work_day,08:20,Morning,16:00,2025-03-07,No,460
+R217,CUST_050,102,Family,36,Female,2025-03-07,Weekday,No,,35.1,High,quick_return,12:45,Afternoon,14:10,2025-03-07,No,85
+R200,CUST_011,103,Solo traveler,38,Male,2025-03-08,Weekend,No,,34.3,Medium,quick_nap,13:10,Afternoon,14:25,2025-03-08,No,75
+R031,CUST_044,109,Family,37,Male,2025-03-08,Weekend,No,,33.6,Medium,quick_return,16:50,Afternoon,18:05,2025-03-08,No,75
+R226,CUST_008,101,Solo traveler,39,Male,2025-03-09,Weekend,No,,36.1,High,night_out,19:50,Evening,01:25,2025-03-10,Yes,335
+R097,CUST_010,105,Solo traveler,30,Male,2025-03-09,Weekend,No,,33.1,Medium,day_trip,10:15,Morning,16:35,2025-03-09,No,380
+R256,CUST_031,101,Solo traveler,36,Female,2025-03-09,Weekend,No,,32.5,Medium,work_day,07:45,Morning,15:30,2025-03-09,No,465
+R136,CUST_031,104,Solo traveler,36,Female,2025-03-09,Weekend,No,,33.6,Medium,quick_nap,14:00,Afternoon,14:45,2025-03-09,No,45
+R178,CUST_033,104,Solo traveler,39,Male,2025-03-09,Weekend,No,,34.3,Medium,work_day,09:10,Morning,16:15,2025-03-09,No,425
+R150,CUST_042,108,Family,31,Male,2025-03-09,Weekend,No,,32.8,Medium,family_day_out,09:30,Morning,15:20,2025-03-09,No,350
+R085,CUST_043,102,Family,33,Male,2025-03-09,Weekend,No,,33.8,Medium,family_day_out,11:50,Morning,18:10,2025-03-09,No,380
+R263,CUST_013,102,Solo traveler,39,Female,2025-03-10,Weekday,No,,32.2,Medium,work_day,09:45,Morning,20:05,2025-03-10,No,620
+R227,CUST_017,107,Solo traveler,40,Female,2025-03-10,Weekday,No,,34.6,Medium,quick_nap,15:30,Afternoon,16:45,2025-03-10,No,75
+R173,CUST_048,102,Family,38,Male,2025-03-10,Weekday,No,,31.4,Low,family_evening_out,17:30,Evening,22:00,2025-03-10,No,270
+R025,CUST_017,107,Solo traveler,40,Female,2025-03-11,Weekday,No,,33.5,Medium,quick_nap,14:00,Afternoon,14:50,2025-03-11,No,50
+R118,CUST_009,104,Solo traveler,40,Male,2025-03-12,Weekday,No,,31.7,Low,quick_nap,14:10,Afternoon,15:15,2025-03-12,No,65
+R021,CUST_010,109,Solo traveler,30,Male,2025-03-12,Weekday,No,,33.8,Medium,day_trip,09:00,Morning,15:25,2025-03-12,No,385
+R285,CUST_043,106,Family,33,Male,2025-03-12,Weekday,No,,33.3,Medium,park_pool_break,11:50,Morning,14:10,2025-03-12,No,140
+R110,CUST_059,109,Family,40,Female,2025-03-12,Weekday,No,,30.1,Low,family_evening_out,16:10,Afternoon,20:00,2025-03-12,No,230
+R037,CUST_060,104,Family,39,Female,2025-03-13,Weekday,No,,34.7,Medium,family_day_out,10:15,Morning,14:25,2025-03-13,No,250
+R205,CUST_012,104,Solo traveler,36,Male,2025-03-14,Weekday,No,,36.3,High,quick_nap,13:45,Afternoon,14:55,2025-03-14,No,70
+R174,CUST_018,105,Solo traveler,37,Female,2025-03-14,Weekday,No,,34.0,Medium,work_day,08:30,Morning,17:40,2025-03-14,No,550
+R193,CUST_020,106,Solo traveler,33,Male,2025-03-14,Weekday,No,,35.4,High,work_day,08:45,Morning,16:50,2025-03-14,No,485
+R090,CUST_040,103,Family,36,Female,2025-03-14,Weekday,No,,32.8,Medium,family_evening_out,16:50,Afternoon,21:15,2025-03-14,No,265
+R123,CUST_018,106,Solo traveler,37,Female,2025-03-15,Weekend,No,,37.0,High,quick_nap,14:20,Afternoon,15:15,2025-03-15,No,55
+R077,CUST_006,109,Solo traveler,36,Male,2025-03-16,Weekend,No,,32.0,Medium,night_out,18:45,Evening,23:55,2025-03-16,No,310
+R284,CUST_023,106,Solo traveler,31,Female,2025-03-16,Weekend,No,,30.3,Low,night_out,18:50,Evening,23:30,2025-03-16,No,280
+R276,CUST_032,106,Solo traveler,37,Female,2025-03-17,Weekday,No,,32.1,Medium,day_trip,11:30,Morning,16:30,2025-03-17,No,300
+R162,CUST_001,102,Solo traveler,35,Male,2025-03-18,Weekday,No,,30.0,Low,work_day,07:20,Morning,16:25,2025-03-18,No,545
+R182,CUST_013,110,Solo traveler,39,Female,2025-03-18,Weekday,No,,34.7,Medium,night_out,18:10,Evening,21:45,2025-03-18,No,215
+R234,CUST_015,101,Solo traveler,31,Male,2025-03-20,Weekday,No,,36.3,High,work_day,07:00,Morning,14:05,2025-03-20,No,425
+R221,CUST_021,105,Solo traveler,38,Female,2025-03-20,Weekday,No,,31.6,Low,quick_nap,16:15,Afternoon,18:00,2025-03-20,No,105
+R144,CUST_032,103,Solo traveler,37,Female,2025-03-20,Weekday,No,,34.8,Medium,quick_nap,14:50,Afternoon,16:20,2025-03-20,No,90
+R246,CUST_053,103,Family,37,Male,2025-03-20,Weekday,No,,36.3,High,family_day_out,11:30,Morning,17:05,2025-03-20,No,335
+R212,CUST_001,108,Solo traveler,35,Male,2025-03-21,Weekday,No,,36.7,High,quick_nap,16:20,Afternoon,17:35,2025-03-21,No,75
+R188,CUST_012,105,Solo traveler,36,Male,2025-03-21,Weekday,No,,35.0,High,quick_nap,13:20,Afternoon,15:30,2025-03-21,No,130
+R258,CUST_026,110,Solo traveler,38,Female,2025-03-21,Weekday,No,,31.0,Low,day_trip,09:15,Morning,14:35,2025-03-21,No,320
+R014,CUST_031,110,Solo traveler,36,Female,2025-03-21,Weekday,No,,36.4,High,work_day,07:50,Morning,15:25,2025-03-21,No,455
+R079,CUST_047,103,Family,39,Female,2025-03-21,Weekday,No,,32.9,Medium,park_pool_break,10:45,Morning,13:15,2025-03-21,No,150
+R213,CUST_049,108,Family,40,Female,2025-03-21,Weekday,No,,33.5,Medium,park_pool_break,11:50,Morning,15:20,2025-03-21,No,210
+R157,CUST_016,107,Solo traveler,39,Male,2025-03-22,Weekend,No,,35.9,High,night_out,17:45,Evening,20:35,2025-03-22,No,170
+R247,CUST_020,101,Solo traveler,33,Male,2025-03-22,Weekend,No,,32.9,Medium,quick_nap,16:00,Afternoon,16:55,2025-03-22,No,55
+R283,CUST_025,104,Solo traveler,36,Male,2025-03-22,Weekend,No,,35.5,High,work_day,08:15,Morning,15:00,2025-03-22,No,405
+R209,CUST_036,105,Family,36,Female,2025-03-22,Weekend,No,,35.0,High,family_day_out,11:45,Morning,18:55,2025-03-22,No,430
+R098,CUST_039,109,Family,36,Female,2025-03-22,Weekend,No,,35.3,High,family_day_out,10:10,Morning,16:10,2025-03-22,No,360
+R216,CUST_003,103,Solo traveler,38,Male,2025-03-23,Weekend,No,,33.7,Medium,work_day,07:40,Morning,15:15,2025-03-23,No,455
+R294,CUST_007,102,Solo traveler,31,Female,2025-03-23,Weekend,No,,33.7,Medium,day_trip,10:20,Morning,15:20,2025-03-23,No,300
+R251,CUST_018,109,Solo traveler,37,Female,2025-03-23,Weekend,No,,30.7,Low,quick_nap,16:30,Afternoon,17:35,2025-03-23,No,65
+R231,CUST_020,110,Solo traveler,33,Male,2025-03-23,Weekend,No,,37.5,High,quick_nap,15:00,Afternoon,15:45,2025-03-23,No,45
+R132,CUST_034,107,Solo traveler,30,Male,2025-03-23,Weekend,No,,34.4,Medium,day_trip,11:10,Morning,16:05,2025-03-23,No,295
+R203,CUST_039,107,Family,36,Female,2025-03-23,Weekend,No,,34.3,Medium,family_day_out,09:15,Morning,15:20,2025-03-23,No,365
+R017,CUST_051,106,Family,37,Female,2025-03-23,Weekend,No,,34.7,Medium,family_day_out,09:45,Morning,19:35,2025-03-23,No,590
+R065,CUST_054,103,Family,35,Male,2025-03-23,Weekend,No,,35.7,High,family_evening_out,17:40,Evening,22:45,2025-03-23,No,305
+R252,CUST_019,104,Solo traveler,34,Male,2025-03-24,Weekday,No,,32.1,Medium,quick_nap,13:00,Afternoon,13:55,2025-03-24,No,55
+R281,CUST_028,101,Solo traveler,31,Male,2025-03-24,Weekday,No,,33.8,Medium,day_trip,10:20,Morning,15:10,2025-03-24,No,290
+R241,CUST_039,110,Family,36,Female,2025-03-24,Weekday,No,,32.8,Medium,family_day_out,10:50,Morning,16:15,2025-03-24,No,325
+R015,CUST_052,102,Family,33,Male,2025-03-24,Weekday,No,,37.2,High,family_day_out,11:10,Morning,16:30,2025-03-24,No,320
+R022,CUST_001,102,Solo traveler,35,Male,2025-03-25,Weekday,No,,33.3,Medium,night_out,18:45,Evening,22:30,2025-03-25,No,225
+R087,CUST_015,108,Solo traveler,31,Male,2025-03-25,Weekday,No,,33.1,Medium,work_day,08:45,Morning,18:00,2025-03-25,No,555
+R114,CUST_017,105,Solo traveler,40,Female,2025-03-25,Weekday,No,,33.6,Medium,quick_nap,16:20,Afternoon,17:40,2025-03-25,No,80
+R137,CUST_027,105,Solo traveler,35,Female,2025-03-25,Weekday,No,,33.9,Medium,night_out,17:00,Evening,21:20,2025-03-25,No,260
+R020,CUST_052,103,Family,33,Male,2025-03-25,Weekday,No,,35.5,High,family_day_out,11:50,Morning,15:30,2025-03-25,No,220
+R039,CUST_005,104,Solo traveler,30,Male,2025-03-27,Weekday,No,,36.6,High,day_trip,10:10,Morning,15:10,2025-03-27,No,300
+R192,CUST_019,105,Solo traveler,34,Male,2025-03-27,Weekday,No,,33.3,Medium,day_trip,10:00,Morning,14:00,2025-03-27,No,240
+R145,CUST_027,101,Solo traveler,35,Female,2025-03-27,Weekday,No,,32.5,Medium,day_trip,11:15,Morning,14:25,2025-03-27,No,190
+R184,CUST_050,101,Family,36,Female,2025-03-27,Weekday,No,,33.6,Medium,family_evening_out,16:40,Afternoon,20:40,2025-03-27,No,240
+R059,CUST_033,103,Solo traveler,39,Male,2025-03-28,Weekday,No,,31.2,Low,day_trip,10:40,Morning,16:35,2025-03-28,No,355
+R129,CUST_034,102,Solo traveler,30,Male,2025-03-29,Weekend,No,,34.1,Medium,quick_nap,16:10,Afternoon,17:35,2025-03-29,No,85
+R005,CUST_010,109,Solo traveler,30,Male,2025-03-30,Weekend,No,,34.9,Medium,night_out,17:30,Evening,22:45,2025-03-30,No,315
+R286,CUST_029,105,Solo traveler,37,Male,2025-03-30,Weekend,No,,34.0,Medium,day_trip,11:20,Morning,15:05,2025-03-30,No,225
+R161,CUST_048,106,Family,38,Male,2025-03-30,Weekend,No,,33.4,Medium,family_day_out,10:30,Morning,17:55,2025-03-30,No,445
+R052,CUST_052,103,Family,33,Male,2025-03-30,Weekend,No,,31.7,Low,family_day_out,10:10,Morning,16:45,2025-03-30,No,395
+R140,CUST_003,106,Solo traveler,38,Male,2025-03-31,Weekday,No,,38.1,High,quick_nap,16:40,Afternoon,17:50,2025-03-31,No,70
+R080,CUST_047,109,Family,39,Female,2025-03-31,Weekday,No,,36.4,High,family_day_out,09:00,Morning,13:45,2025-03-31,No,285
+R279,CUST_051,109,Family,37,Female,2025-03-31,Weekday,No,,31.3,Low,family_evening_out,16:40,Afternoon,21:00,2025-03-31,No,260
